@@ -69,6 +69,7 @@ java -jar target/my-blog-back-app.jar
 
 ## Запуск Frontend
 cd frontend
+npm install
 npm run dev
 http://localhost:3000/
 
