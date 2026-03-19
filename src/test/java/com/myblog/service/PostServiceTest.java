@@ -8,10 +8,9 @@ import com.myblog.model.Post;
 import com.myblog.service.impl.PostServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,14 +20,14 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
 
-@ExtendWith(MockitoExtension.class)
+@SpringBootTest(classes = PostServiceImpl.class)
 class PostServiceTest {
 
-    @Mock
+    @MockBean
     private PostDao postDao;
 
-    @InjectMocks
-    private PostServiceImpl postService;
+    @Autowired
+    private PostService postService;
 
     private Post testPost;
 
