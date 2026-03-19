@@ -71,6 +71,8 @@ java -jar target/my-blog-back-app.jar
 cd frontend
 npm run dev
 http://localhost:3000/
+
+
 ## Примеры использования API
 
 Получить список постов:
