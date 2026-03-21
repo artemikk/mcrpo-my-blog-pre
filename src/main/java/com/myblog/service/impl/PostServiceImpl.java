@@ -83,20 +83,6 @@ public class PostServiceImpl implements PostService {
 
     @Override
     @Transactional
-    public void addLike(Long id) {
-        log.debug("Adding like for post with id: {}", id);
-        incrementLikes(id);
-    }
-
-    @Override
-    @Transactional
-    public void removeLike(Long id) {
-        log.debug("Removing like for post with id: {}", id);
-        decrementLikes(id);
-    }
-
-    @Override
-    @Transactional
     public int incrementLikes(Long id) {
         log.debug("Incrementing likes for post with id: {}", id);
         postDao.incrementLikes(id);
